@@ -1,13 +1,11 @@
 language: ruby
 os: linux
-arch: amd64
+arch: ppc64le
 dist: xenial
 addons:
   postgresql: 9.6
 rvm: 2.6.3
 cache: bundler
-
-
 jobs:
   include:
     - stage: "rspec"
