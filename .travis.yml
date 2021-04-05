@@ -1,21 +1,102 @@
 language: ruby
-os: linux
-arch: ppc64le
-dist: xenial
-addons:
-  postgresql: 9.6
-rvm: 2.6.3
-cache: bundler
 
 jobs:
   include:
-    - stage: "rspec"
-      script: bundle exec rspec
-      before_script:
-        - "bundle exec rake db:create db:migrate"
-notifications:
-  email:
-    - shairyarbaig@gmail.com
-    - shairyar@travis-ci.org
-    - shairyar@travis-ci.com
+     - dist: focal
+       script: 
+        - echo "Threads/core $(nproc --all)"
+        - free -g
+     - dist: focal
+       vm:
+         size: medium
+       script: 
+        - echo "Threads/core $(nproc --all)"
+        - free -g
+     - dist: focal
+       vm:
+         size: large
+       script: 
+        - echo "Threads/core $(nproc --all)"
+        - free -g
+     - dist: focal
+       vm:
+         size: x-large
+       script: 
+        - echo "Threads/core $(nproc --all)"
+        - free -g
+     - dist: focal
+       vm:
+         size: 2x-large
+       script: 
+        - echo "Threads/core $(nproc --all)"
+        - free -g
+     - os: osx
+       python: "2.7"
+       script: python ./hello.py
+     - os: osx
+       python: "2.7"
+       script: python ./hello.py
+       vm:
+         size: medium
+     - os: osx
+       python: "2.7"
+       script: python ./hello.py
+       vm:
+         size: large
+     - os: osx
+       python: "2.7"
+       script: python ./hello.py
+       vm:
+         size: x-large
+     - os: osx
+       python: "2.7"
+       script: python ./hello.py
+       vm:
+         size: 2x-large
+     - os: freebsd
+       script: python ./hello.py
+     - os: freebsd
+       script: python ./hello.py
+       vm:
+         size: medium
+     - os: freebsd
+       script: python ./hello.py
+       vm:
+         size: large
+     - os: freebsd
+       script: python ./hello.py
+       vm:
+         size: x-large
+     - os: freebsd
+       script: python ./hello.py
+       vm:
+         size: 2x-large
+     - os: windows
+     - os: windows
+       vm:
+         size: medium
+     - os: windows
+       vm:
+         size: large
+     - os: windows
+       vm:
+         size: x-large
+     - os: windows
+       vm:
+         size: 2x-large
+     - arch: ppc64le
+     - arch: s390x
+     - arch: arm64
+     - arch: arm64
+       vm:
+         size: large
+     - arch: arm64-graviton2
+       group: edge
+       dist: focal
+     - arch: arm64-graviton2
+       group: edge
+       dist: focal
+       virt: vm
+       vm:
+         size: x-large
 
