@@ -1,7 +1,7 @@
 os: osx
 rvm: 2.6.3
 vm:
-  size: large
+  size: x-large
   
 jobs:
   include:
