@@ -2,6 +2,7 @@ os: linux
 rvm: 2.6.3
 vm:
   size: 2x-large
+
 jobs:
   include:
     - stage: "sleep"
