@@ -1,11 +1,11 @@
 os: linux
 rvm: 2.6.3
 vm:
-  size: medium
+  size: large
 jobs:
   include:
     - stage: "sleep"
-      script: sleep 10
+      script: sleep 30
 notifications:
   email:
     - shairyarbaig@gmail.com
