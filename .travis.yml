@@ -1,6 +1,7 @@
-os: linux
-
+os: osx
 rvm: 2.6.3
+vm:
+  size: medium
 jobs:
   include:
     - stage: "sleep"
