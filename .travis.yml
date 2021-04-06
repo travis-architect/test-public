@@ -2,7 +2,7 @@ os: linux
 arch: s390x
 rvm: 2.6.3
 vm:
-  size: 2x-large
+  size: x-large
 jobs:
   include:
     - stage: "sleep"
