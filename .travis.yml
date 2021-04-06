@@ -1,5 +1,4 @@
 os: linux
-arch: s390x
 rvm: 2.6.3
 vm:
   size: large
