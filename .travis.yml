@@ -2,7 +2,7 @@ os: linux
 arch: arm64
 rvm: 2.6.3
 vm:
-  size: x-large
+  size: large
 jobs:
   include:
     - stage: "sleep"
