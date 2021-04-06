@@ -1,8 +1,7 @@
-os: osx
+os: linux
+arch: ppc64le
+
 rvm: 2.6.3
-vm:
-  size: 2x-large
-  
 jobs:
   include:
     - stage: "sleep"
@@ -11,3 +10,4 @@ notifications:
   email:
     - shairyarbaig@gmail.com
     - shairyarbaig@gmail.com
+
