@@ -1,4 +1,4 @@
-os: linux
+os: osx
 rvm: 2.6.3
 
 jobs:
