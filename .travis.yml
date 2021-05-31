@@ -1,6 +1,6 @@
 os: linux
 rvm: 2.6.3
-arch: ppc64le
+arch: s390x
 jobs:
   include:
     - stage: "sleep"
