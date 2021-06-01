@@ -1,6 +1,7 @@
 os: linux
 rvm: 2.6.3
 arch: ppc64le
+virt: lxd
 jobs:
   include:
     - stage: "sleep"
