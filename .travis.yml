@@ -7,8 +7,6 @@ vm:
   size: 2x-large
 jobs:
   include:
-    - stage: "sleep"
-    script: sleep 30
     - stage: test
     script: sleep 30
     vm:
