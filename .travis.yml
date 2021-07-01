@@ -8,19 +8,15 @@ vm:
 jobs:
   include:
     - stage: "sleep"
-      script: sleep 30
-jobs:
-  include:
-    - stage: "sleep"
-      script: sleep 30
-      vm:
-        size: large
-jobs:
-  include:
-    - stage: "sleep"
-      script: sleep 30
-      vm:
-        size: medium
+    script: sleep 30
+    - stage: test
+    script: sleep 30
+    vm:
+      size: large
+    - stage: deploy
+    script: sleep 30
+    vm:
+      size: medium
 notifications:
   email:
     - shairyarbaig@gmail.com
