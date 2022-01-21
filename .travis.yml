@@ -1,23 +1,11 @@
-os: linux
-rvm: 2.6.3
-arch: amd64           # LXD container based build for OSS only
-os: linux             # required for arch different than amd64
-dist: focal           # or bionic | xenial with xenial as default
-vm:
-  size: 2x-large
+language: ruby
+rvm: 2.5
+script:
+- echo 1
+cache:
+  directories:
+    - /home/travis/.rvm
 jobs:
   include:
-    - stage: sleep
-      script: sleep 30
-    - stage: test
-      script: sleep 30
-      vm:
-        size: large
-    - stage: deploy
-      script: sleep 30
-      vm:
-        size: medium
-notifications:
-  email:
-    - shairyarbaig@gmail.com
-    - shairyarbaig@gmail.com
+    - stage: "echo SEC_ENV"
+      script: echo $SEC_ENV
