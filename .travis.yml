@@ -3,8 +3,9 @@ rvm: 2.5
 script:
 - echo 1
 cache:
+  bundler: true
   directories:
-    - /home/travis/.rvm
+    - vendor/bundle
 jobs:
   include:
     - stage: "echo SEC_ENV"
